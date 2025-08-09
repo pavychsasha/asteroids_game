@@ -57,8 +57,8 @@ uv run main.py
 
 This is currently a small project, but potential features include:
 
-1. **Optimize collision logic** to avoid unnecessary calculations  
-2. **Refactor code** for better readability and maintainability  
+1. **Optimize collision logic** to avoid unnecessary calculations
+2. **Refactor code** for better readability and maintainability  - Done
 3. **Add a scoring system** so players can compete with themselves or friends  
 4. **Implement multiple lives** and respawning after destruction  
 5. **Add asteroid explosion effects** for visual feedback  
