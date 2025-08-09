@@ -1,6 +1,8 @@
 # 🚀 Starship vs Asteroids
 
-A small **Pygame** project where a triangular starship can move around and shoot at asteroids (represented as circles).  
+A small **Pygame** project
+where a triangular starship can move around
+and shoot at asteroids (represented as circles).  
 Currently, it’s a simple game prototype — but there’s plenty of room for upgrades.
 
 ---
@@ -18,11 +20,10 @@ Currently, it’s a simple game prototype — but there’s plenty of room for u
 - Python 3.12
 - [uv](https://github.com/astral-sh/uv) (for running and dependency management)
 
-Install `uv` (if you don't have it yet):
-
-```bash
-pip install uv
-```
+[Install `uv`](
+https://docs.astral.sh/uv/getting-started/installation/
+)
+(if you don't have it yet)
 
 ---
 
@@ -31,7 +32,7 @@ pip install uv
 Install dependencies:
 
 ```bash
-uv pip install pygame
+uv sync
 ```
 
 Run the game:
@@ -48,7 +49,7 @@ uv run main.py
 - Asteroids represented as moving circles
 - Basic shooting mechanic
 - Simple collision detection
-- Objects disappear when they collide
+- Objects disappear or split when they collide
 
 ---
 

@@ -1,10 +1,10 @@
 import random
 import pygame
-import circleshape
-import constants
+from models import CircleShape
+from core import constants
 
 
-class Asteroid(circleshape.CircleShape):
+class Asteroid(CircleShape):
     def __init__(self, x, y, radius) -> None:
         super().__init__(x, y, radius)
 

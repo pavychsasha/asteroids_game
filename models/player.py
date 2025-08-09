@@ -1,20 +1,18 @@
 import pygame
-import constants
-import circleshape
-from bullet import Bullet
+from core import constants
+from models import CircleShape, Bullet
 
 
-class Player(circleshape.CircleShape):
-    
+class Player(CircleShape):
     def __init__(self, x, y) -> None:
         super().__init__(x, y, constants.PLAYER_RADIUS)
         self.rotation = 0
         self.clock = 0
 
-
     def triangle(self):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
-        right = pygame.Vector2(0, 1).rotate(self.rotation + 90) * self.radius / 1.5
+        right = pygame.Vector2(0, 1).rotate(
+            self.rotation + 90) * self.radius / 1.5
 
         a = self.position + forward * self.radius
         b = self.position - forward * self.radius - right
@@ -22,12 +20,8 @@ class Player(circleshape.CircleShape):
         return [a, b, c]
 
     def draw(self, screen):
-        pygame.draw.polygon(
-            screen,
-            color="white",
-            points=self.triangle(),
-            width=2
-        )
+        pygame.draw.polygon(screen, color="white",
+                            points=self.triangle(), width=2)
 
     def rotate(self, dt):
         self.rotation += constants.PLAYER_TURN_SPEED * dt
@@ -66,4 +60,3 @@ class Player(circleshape.CircleShape):
         bullet.velocity *= constants.PLAYER_SHOOT_SPEED
 
         self.clock = constants.PLAYER_SHOOT_COOLDOWN
-
