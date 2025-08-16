@@ -6,7 +6,6 @@ on:
   pull_request:
     branches:
       - main
-  wokrflow_dispatch:
 
 jobs:
   buid:
