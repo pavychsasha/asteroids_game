@@ -1,0 +1,8 @@
+name: Asteroids game
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"] 
+  wokrflow_dispatch:
+    
