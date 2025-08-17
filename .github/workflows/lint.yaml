@@ -24,8 +24,5 @@ jobs:
           python -m pip install flake8  
       - name: Run flake8
         run: |
-          flake8 . --exclude=build,venv,dist,.github,docs --count
-           --select=E9,F63,F7,F82,F821,F841,B007 --max-complexity=10 
-           --max-line-length=127 --show-source --statistics
-
+          flake8 . --exclude=build,venv,dist,.github,docs --count --select=E9,F63,F7,F82,F821,F841,B007 --max-complexity=10 --max-line-length=127 --show-source --statistics
         
